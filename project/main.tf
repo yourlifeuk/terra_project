@@ -16,7 +16,7 @@ provider "aws" {
 
 # Create S3 Bucket 
 resource "aws_s3_bucket" "log_mybucket"{    
-        bucket = "joeterraformlogs"
+        bucket = "joechanbucketlog"
         acl = "log-delivery-write"
         tags = {
             Name = "Logs"
@@ -27,7 +27,7 @@ resource "aws_s3_bucket" "log_mybucket"{
 }
 
 resource "aws_s3_bucket" "mybucket"{    
-        bucket = "joeterraform"
+        bucket = "joechanbucket"
         acl = "private"
         tags = {
             Name = "Sales"
