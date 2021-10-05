@@ -9,8 +9,10 @@ terraform plan
 terraform apply
 ```
 
-  Playbook  |  Description  |
+  Commands  |  Description  |
 |  --- |  ---  |
-|  [playb.yml](/Py-sho-ver-onbox)  |  show ip interefaces for switches and routers. |
-|  [playb2.yml ](/tdr-test)  |  enable CDP on both routers and switches.  |
-|  [playb3.yml ](/eem_configdiff_to_spark)  |  playb3.yml  enable OSPF on routers.  |
+|  [bucket = "joechanbucketlog"](/http://askjoechan.com)  |  Input the bucket name you want, also need to universal. |
+|  [acl = "log-delivery-write" ](/http://askjoechan.com )  |  Access control list (ACL)  |
+|  [tags = {
+            Name = "Logs"
+            Enviroment = "Dev" ](/http://askjoechan.com)  |  Tags you mark for your projects.  |
