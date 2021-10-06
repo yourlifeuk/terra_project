@@ -8,7 +8,8 @@ terraform validate
 # Terraform Project
 ## Project - Creating s3 bucket in AWS
 
-1. [state that you created](/http://askjoechan.com)  - aws_s3_bucket.log_mybucket
+1. [state that you created](/http://askjoechan.com)  
+- aws_s3_bucket.log_mybucket
 - aws_s3_bucket.mybucket
 - aws_s3_bucket_public_access_block.Publicblcok
 
