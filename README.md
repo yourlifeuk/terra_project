@@ -1,14 +1,26 @@
 :fire: **TERRAFORM!**
 
-# Terraform Project
-## Project - Creating s3 bucket in AWS
 
 ```zsh
 terraform init
+terraform validate
 ```
+# Terraform Project
+## Project - Creating s3 bucket in AWS
 
-     |     |
+|    Title | Description    |
 |  --- |  ---  |
-|  [playb.yml](/Py-sho-ver-onbox)  |    |
-|  [playb2.yml ](/tdr-test)  |     |
-|  [playb3.yml ](/eem_configdiff_to_spark)  |     |
+|  [state you created](/http://askjoechan.com)  |  aws_s3_bucket.log_mybucket
+aws_s3_bucket.mybucket
+aws_s3_bucket_public_access_block.Publicblcok  |
+|  [ ](/http://askjoechan.com)   |     |
+|  [  ](/http://askjoechan.com)  |     |
+
+
+## Project1 - Creating Networking component and Linux VM within the VPC
+
+|   Title  |  Description   |
+|  --- |  ---  |
+|  [ ](/http://askjoechan.com)   |    |
+|  [  ](/http://askjoechan.com)   |     |
+|  [ ](/http://askjoechan.com)   |     |
