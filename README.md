@@ -10,7 +10,7 @@ terraform validate
 
 |    Title | Description    |
 |  --- |  ---  |
-|  [state you created](/http://askjoechan.com)  |  aws_s3_bucket.log_mybucket
+|  [state that you created](/http://askjoechan.com)  |  aws_s3_bucket.log_mybucket
 aws_s3_bucket.mybucket
 aws_s3_bucket_public_access_block.Publicblcok  |
 |  [ ](/http://askjoechan.com)   |     |
@@ -21,7 +21,7 @@ aws_s3_bucket_public_access_block.Publicblcok  |
 
 |   Title  |  Description   |
 |  --- |  ---  |
-|  [ ](/http://askjoechan.com)   |  aws_instance.web1
+|  [State that you created](/http://askjoechan.com)   |  aws_instance.web1
 aws_internet_gateway.terragateway
 aws_route_table.terraroute
 aws_route_table_association.terratable
