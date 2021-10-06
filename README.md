@@ -21,6 +21,12 @@ aws_s3_bucket_public_access_block.Publicblcok  |
 
 |   Title  |  Description   |
 |  --- |  ---  |
-|  [ ](/http://askjoechan.com)   |    |
+|  [ ](/http://askjoechan.com)   |  aws_instance.web1
+aws_internet_gateway.terragateway
+aws_route_table.terraroute
+aws_route_table_association.terratable
+aws_security_group.terrasg
+aws_subnet.terrasubnet
+aws_vpc.terravpc  |
 |  [  ](/http://askjoechan.com)   |     |
 |  [ ](/http://askjoechan.com)   |     |
