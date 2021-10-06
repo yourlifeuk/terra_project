@@ -21,12 +21,6 @@ aws_s3_bucket_public_access_block.Publicblcok  |
 
 |   Title  |  Description   |
 |  --- |  ---  |
-|  [State that you created](/http://askjoechan.com)   |  1. aws_instance.web1
-2. aws_internet_gateway.terragateway
-3. aws_route_table.terraroute
-4. aws_route_table_association.terratable
-5. aws_security_group.terrasg
-6. aws_subnet.terrasubnet
-7. aws_vpc.terravpc  |
+|  [State that you created](/http://askjoechan.com)   |  1. aws_instance.web1 2. aws_internet_gateway.terragateway 3. aws_route_table.terraroute 4. aws_route_table_association.terratable 5. aws_security_group.terrasg 6. aws_subnet.terrasubnet 7. aws_vpc.terravpc  |
 |  [  ](/http://askjoechan.com)   |     |
 |  [ ](/http://askjoechan.com)   |     |
