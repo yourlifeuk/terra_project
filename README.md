@@ -19,8 +19,11 @@ aws_s3_bucket_public_access_block.Publicblcok  |
 
 ## Project1 - Creating Networking component and Linux VM within the VPC
 
-|   Title  |  Description   |
-|  --- |  ---  |
-|  [State that you created](/http://askjoechan.com)   |  1. aws_instance.web1 2. aws_internet_gateway.terragateway 3. aws_route_table.terraroute 4. aws_route_table_association.terratable 5. aws_security_group.terrasg 6. aws_subnet.terrasubnet 7. aws_vpc.terravpc  |
-|  [  ](/http://askjoechan.com)   |     |
-|  [ ](/http://askjoechan.com)   |     |
+1. [State that you created](/http://askjoechan.com)   
+- aws_instance.web1 
+- aws_internet_gateway.terragateway 
+- aws_route_table.terraroute 
+- aws_route_table_association.terratable 
+- aws_security_group.terrasg 
+- aws_subnet.terrasubnet 
+- aws_vpc.terravpc  
