@@ -12,7 +12,7 @@ terraform {
 
 provider "aws" {
   profile = "default"
-  region  = "eu-west-2"
+  region  = "eu-west-1"
 }
 
 resource "aws_vpc" "terravpc" {
@@ -20,11 +20,15 @@ resource "aws_vpc" "terravpc" {
   enable_dns_hostnames = "true"
   enable_dns_support   = "true"
 
+    tags = {
+        Name = "terra-vpc"
+    }
 }
 
 output "vpcname" {
   value = aws_vpc.terravpc.arn
 }
+
 
 
 # resource "aws_instance" "terrainstance" {
