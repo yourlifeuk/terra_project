@@ -1,0 +1,12 @@
+
+**/.terraform/*
+
+*.terraform*
+*.exe*
+*.tfstate
+*.tfstate*
+
+
+*.log
+
+*.tfvars
