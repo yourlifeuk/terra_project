@@ -5,8 +5,8 @@
 *.exe*
 *.tfstate
 *.tfstate*
-provider.tf
-backend.tf
+*provider.tf*
+*backend.tf*
 
 *.log
 
