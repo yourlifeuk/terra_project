@@ -6,6 +6,7 @@
 *.tfstate
 *.tfstate*
 provider.tf
+backend.tf
 
 *.log
 
