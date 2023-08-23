@@ -11,8 +11,8 @@ resource "aws_security_group" "myapp-sg" {
     }
 
     ingress {
-        from_port   = 8080
-        to_port     = 8080
+        from_port   = 80
+        to_port     = 80
         protocol    = "tcp"
         cidr_blocks = ["0.0.0.0/0"]
         
@@ -60,7 +60,7 @@ resource "aws_instance" "myapp-server" {
 
     subnet_id               = var.subnet_id
     vpc_security_group_ids = [aws_security_group.myapp-sg.id]
-    availability_zone       = var.avail_zone
+    # availability_zone       = var.avail_zone
 
     associate_public_ip_address = true
     # key_name  = aws_key_pair.ssh-key.key_name
@@ -75,5 +75,6 @@ resource "aws_instance" "myapp-server" {
         command = "echo ${self.public_ip} > output.txt"
     }
 }
+
 
 
