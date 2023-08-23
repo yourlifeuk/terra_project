@@ -1,8 +1,8 @@
-terraform {
-    backend "s3" {
-        bucket  = "mamawonderland"
-        key     = "terraform-project5.tfstate"
-        region = "eu-west-2"
-    }
+# terraform {
+#     backend "s3" {
+#         bucket  = "givemecuddle"
+#         key     = "terraform-project4.tfstate"
+#         region = "eu-west-3"
+#     }
 
-}
+# }

@@ -5,7 +5,7 @@
 *.exe*
 *.tfstate
 *.tfstate*
-
+provider.tf
 
 *.log
 
