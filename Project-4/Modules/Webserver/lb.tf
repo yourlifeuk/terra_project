@@ -12,20 +12,12 @@ resource "aws_alb" "alb" {
 resource "aws_subnet" "myapp-subnet-2" {
     vpc_id            = var.vpc_id
     cidr_block        = "10.10.20.0/24"
-    availability_zone = "eu-west-1b"
+    availability_zone = "eu-west-3b"
     tags = {
         Name = "${var.env_prefix}-subnet-2"
     }
 }
 
-resource "aws_subnet" "myapp-subnet-3" {
-    vpc_id            = var.vpc_id
-    cidr_block        = "10.10.30.0/24"
-    availability_zone = "eu-west-1c"
-    tags = {
-        Name = "${var.env_prefix}-subnet-3"
-    }
-}
 
 resource "aws_alb_listener" "alb_listener" {  
   load_balancer_arn = "${aws_alb.alb.arn}"  
