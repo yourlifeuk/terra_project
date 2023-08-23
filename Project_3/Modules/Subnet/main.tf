@@ -14,6 +14,14 @@ resource "aws_internet_gateway" "myapp-igw" {
     }
 }
  
+
+# resource "aws_internet_gateway" "myapp-igw" {
+#     vpc_id = var.vpc_id
+#     tags   = {
+#         Name = "${var.env_prefix}-rtb"
+#     }
+# }
+ 
 resource "aws_route_table" "myapp-route-table" {
     vpc_id = var.vpc_id
 

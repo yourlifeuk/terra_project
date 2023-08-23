@@ -4,6 +4,6 @@ variable instance_type {}
 # variable public_key_location {}
 # variable private_key_location {}
 variable env_prefix {}
-variable avail_zone {}
+# variable avail_zone {}
 variable region {}
 variable image_name {}

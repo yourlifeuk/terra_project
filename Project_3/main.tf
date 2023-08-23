@@ -38,7 +38,7 @@ module "myapp-server" {
     # private_key_location = var.private_key_location
     instance_type        = var.instance_type
     image_name           = var.image_name
-    avail_zone           = var.avail_zone
+    # avail_zone           = var.avail_zone
     env_prefix           = var.env_prefix
     vpc_id               = aws_vpc.myapp-vpc.id
     subnet_id            = module.myapp-subnet.subnet.id

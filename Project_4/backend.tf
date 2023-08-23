@@ -1,9 +1,8 @@
 terraform {
     backend "s3" {
-        bucket  = "comeonjames-2022"
-        key     = "network/terraform-demo.tfstate"
+        bucket  = "mamawonderland"
+        key     = "terraform-project5.tfstate"
         region = "eu-west-2"
-        dynamodb_table = "lockingmate"
     }
 
 }

@@ -1,7 +1,3 @@
-output "SUBNET_ID"{
-    value = module.myapp-subnet.subnet.id
-}
-
-output "Instance_IP" {
-    value = module.myapp-server.instance_ip
+output "elb_dns_name" {
+  value = aws_elb.web_elb.dns_name
 }
