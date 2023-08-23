@@ -2,6 +2,7 @@
 
 # Terraform 
 $ terraform state list
+```zsh
 aws_vpc.myapp-vpc
 module.myapp-server.aws_alb.alb
 module.myapp-server.aws_alb_listener.alb_listener
@@ -14,6 +15,7 @@ module.myapp-subnet.aws_route_table.myapp-route-table
 module.myapp-subnet.aws_route_table_association.myapp-rtb-association
 module.myapp-subnet.aws_subnet.myapp-subnet-1
 module.myapp-subnet.aws_subnet.myapp-subnet-2
+```
 
 ```zsh
 terraform init
