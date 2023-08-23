@@ -23,4 +23,14 @@ terraform validate
 - aws_route_table_association.terratable 
 - aws_security_group.terrasg 
 - aws_subnet.terrasubnet 
-- aws_vpc.terravpc  
+- aws_vpc.terravpc
+- Creating Networking component and Linux VM within the VPC
+
+## Project2 - Build the network & VM  with Terraform " Modules"
+
+## Project3 - Network + VM + Loadbalancer
+
+## Project4 - Network + VM + Loadbalancer + Auto Scaling Group
+
+
+
