@@ -10,7 +10,7 @@ terraform {
 
 }
 
-resource "aws_vpc" "myapp_vpc"{
+resource "aws_vpc" "myapp-vpc"{
     cidr_block = var.vpc_cidr_blocks
     tags = {
         Name = "${var.env_prefix}-vpc"
@@ -19,8 +19,8 @@ resource "aws_vpc" "myapp_vpc"{
 
 module "myapp-subnet" {
     source = "./Modules/Subnet"
-    subnet_cidr_block = var.subnet_cidr_block
     env_prefix        = var.env_prefix
+    subnet_cidr_block = var.subnet_cidr_block
     vpc_id            = aws_vpc.myapp-vpc.id
 }
 
@@ -33,6 +33,8 @@ module "myapp-server" {
     image_name           = var.image_name
     # avail_zone           = var.avail_zone
     env_prefix           = var.env_prefix
+    
+    subnet_id_1 = module.myapp-subnet.subnet_id_1
+    subnet_id_2 = module.myapp-subnet.subnet_id_2
     vpc_id               = aws_vpc.myapp-vpc.id
-    subnet_id            = module.myapp-subnet.subnet.id
 }

@@ -1,21 +1,13 @@
 resource "aws_alb" "alb" {  
   name            = "alb"  
-  subnets      = [aws_subnet.myapp-subnet-2.id, aws_subnet.myapp-subnet-3.id]
+  load_balancer_type = "application"
+  subnets      = [var.subnet_id_1, var.subnet_id_2]
   security_groups = [aws_security_group.myapp-sg.id]
   internal        = false
   # enable_deletion_protection = true 
     tags = {
         Name = "${var.env_prefix}-alb"
     }  
-}
-
-resource "aws_subnet" "myapp-subnet-2" {
-    vpc_id            = var.vpc_id
-    cidr_block        = "10.10.20.0/24"
-    availability_zone = "eu-west-3b"
-    tags = {
-        Name = "${var.env_prefix}-subnet-2"
-    }
 }
 
 

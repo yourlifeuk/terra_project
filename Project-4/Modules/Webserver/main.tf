@@ -31,22 +31,36 @@ resource "aws_security_group" "myapp-sg" {
     }
 }
 
-data "aws_ami" "latest-amazon-linux-image" {
-    most_recent = true
-    owners      = ["amazon"]
-    filter{  
-        name   = "name"
-        values = [var.image_name]
-    }
-    filter{ 
-        name   = "virtualization-type"
-        values = ["hvm"] 
-    }
-    filter {
-        name   = "description"
-        values = ["Amazon Linux 2 *"]
-    }
-}
+# data "aws_ami" "latest-amazon-linux-image" {
+#     most_recent = true
+#     owners      = ["amazon"]
+#     filter{  
+#         name   = "name"
+#         values = [var.image_name]
+#     }
+#     filter{ 
+#         name   = "virtualization-type"
+#         values = ["hvm"] 
+#     }
+#     filter {
+#         name   = "description"
+#         values = ["Ubuntu*"]
+#     }
+# }
+
+# data "aws_ami" "latest-amazon-linux-image" {
+#   most_recent = true
+#   owners      = ["amazon"]
+#   filter {
+#     name   = "name"
+#     values = ["amzn2-ami-hvm-*"]  # Filter for Amazon Linux 2 AMIs
+#   }
+#   filter {
+#     name   = "virtualization-type"
+#     values = ["hvm"]
+#   }
+# }
+
 
 # resource "aws_key_pair" "ssh-key" {
 #     key_name   = "server-key"
@@ -55,15 +69,15 @@ data "aws_ami" "latest-amazon-linux-image" {
 
 resource "aws_instance" "myapp-server" {
 
-    ami           = data.aws_ami.latest-amazon-linux-image.id 
+    ami           = "ami-05b5a865c3579bbc4"
     instance_type = var.instance_type
 
-    subnet_id               = var.subnet_id
+    subnet_id               = var.subnet_id_1
     vpc_security_group_ids = [aws_security_group.myapp-sg.id]
     # availability_zone       = var.avail_zone
 
     associate_public_ip_address = true
-    # key_name  = aws_key_pair.ssh-key.key_name
+    key_name  = "rancher"
 
     user_data = file("script.sh")
 
