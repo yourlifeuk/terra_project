@@ -1,13 +1,19 @@
 :fire: **TERRAFORM!**
 
 # Terraform 
-## Creating list of resources which allow VM can reach public network
-### aws_internet_gateway.terragateway
-### aws_route_table.terraroute
-### aws_route_table_association.terratable
-### aws_security_group.terrasg
-### aws_subnet.terrasubnet
-### aws_vpc.terravpc
+$ terraform state list
+aws_vpc.myapp-vpc
+module.myapp-server.aws_alb.alb
+module.myapp-server.aws_alb_listener.alb_listener
+module.myapp-server.aws_alb_target_group.alb_target_group
+module.myapp-server.aws_alb_target_group_attachment.svc_physical_external
+module.myapp-server.aws_instance.myapp-server
+module.myapp-server.aws_security_group.myapp-sg
+module.myapp-subnet.aws_internet_gateway.myapp-igw
+module.myapp-subnet.aws_route_table.myapp-route-table
+module.myapp-subnet.aws_route_table_association.myapp-rtb-association
+module.myapp-subnet.aws_subnet.myapp-subnet-1
+module.myapp-subnet.aws_subnet.myapp-subnet-2
 
 ```zsh
 terraform init
@@ -17,16 +23,23 @@ terraform apply
 ```
 
 # main.tf
-  Commands  |  Description  |
-|  --- |  ---  |
-|  [bucket = "joechanbucketlog"](/http://askjoechan.com)  |  Input the bucket name you want, also need to universal. |
-|  [acl = "log-delivery-write" ](/http://askjoechan.com )  |  Access control list (ACL)  |
-|  [tags = (Name = "Logs" Enviroment = "Dev") ](/http://askjoechan.com)  |  Tags you mark for your projects.  |
+resouce "aws_vpc" "myapp-vpc"
+module"myapp-subnet"
+module"myapp-server"
 
+# Modules -> 
+## Subnet (myapp-subnet)
+aws_subnet
+aws_internet_gateway
+aws_route_table
+aws_route_table_association
 
-# network.tf
-  Commands  |  Description  |
-|  --- |  ---  |
-|  [bucket = "joechanbucketlog"](/http://askjoechan.com)  |  Input the bucket name you want, also need to universal. |
-|  [acl = "log-delivery-write" ](/http://askjoechan.com )  |  Access control list (ACL)  |
-|  [tags = (Name = "Logs" Enviroment = "Dev") ](/http://askjoechan.com)  |  Tags you mark for your projects.  |
+## Webserver (myapp-server)
+aws_alb
+aws_alb_listener
+aws_alb_target_group
+aws_alb_target_group_attachement
+
+aws_security_group
+aws_instance
+

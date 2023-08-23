@@ -28,7 +28,7 @@ terraform validate
 
 ## Project2 - Build the network & VM  with Terraform " Modules"
 
-## Project3 - Network + VM + Loadbalancer
+## Project3 - Network + VM + Loadbalancer + Target Group + user data for VM running docker
 
 ## Project4 - Network + VM + Loadbalancer + Auto Scaling Group
 
